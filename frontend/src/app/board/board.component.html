@@ -1,0 +1,22 @@
+<div class="contianer-fluid">
+    <div class="row no-gutters">
+        <div class="col-12 text-center">
+            <img src="../../assets/CHOCOPAY.svg" class="img-fluid w-25">
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-md-4 border px-5">
+            <h5 class="text-gray">Frequent Shipments</h5>
+            <div class="card" dnd-draggable drag-enabled="true" *ngFor="let good of goods" dropzone="demo">
+                <h5 class="card-title">{{good.name}}</h5>
+                <img src="{{good.src}}" class="img-fluid cart-img">
+            </div>
+        </div>
+        <div class="col-md-8 border">
+            <div class="d-flex align-items-center justify-content-between px-5">
+                <h5 class="text-gray">Cart</h5>
+                <h3>{{count}} <i class="fas fa-shopping-cart"></i></h3>
+            </div>
+        </div>
+    </div>
+</div>

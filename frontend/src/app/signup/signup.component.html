@@ -1,0 +1,60 @@
+<div class="container f-h d-flex align-items-center justify-content-center">
+  <div class="card border-0 shadow bg-light">
+    <div class="card-body text-center">
+      <img src="../assets/CHOCOPAY.svg" class="img-fluid" width="50%">
+    </div>
+    <div class="card-body">
+      <form [formGroup]="signupForm" (ngSubmit)="register()">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="text-gray my-2">User</h3>
+            <div class="form-group">
+              <label for="userName">Username</label>
+              <input type="text" class="form-control" formControlName="userName" id="userName" placeholder="User Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" formControlName="userEmail" id="email" placeholder="User Email">
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile</label>
+              <input type="text" class="form-control" id="mobile" placeholder="Mobile number">
+            </div>
+            <div class="form-group">
+              <label for="userPassword">Password</label>
+              <input type="password" class="form-control" formControlName="userPassword" id="userPassword"
+                placeholder="Password">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-gray my-2">Business</h3>
+            <div class="form-group">
+              <label for="companyName">Company name <span class="text-red">*</span></label>
+              <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+            </div>
+            <div class="form-group">
+              <label for="businessEmail">Business Email<span class="text-red">*</span></label>
+              <input type="email" class="form-control" id="businessEmail" placeholder="Business Email">
+            </div>
+            <div class="form-group">
+              <label for="address">Address <span class="text-red">*</span></label>
+              <input type="text" class="form-control" id="address" placeholder="Address">
+            </div>
+            <div class="form-group">
+              <label for="gstin">GSTIN <span class="text-red">*</span></label>
+              <input type="text" class="form-control" id="gstin" placeholder="GSTIN">
+            </div>
+
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="btn btn-choco w-100">Submit<i
+              class="fas fa-plus pl-3"></i></button>
+        </div>
+        <div class="d-flex justify-content-start">
+          <h5 class="main-tag mr-3 mt-3 c-p" (click)="login()"><i class="fas fa-chevron-left pr-3"></i>Back</h5>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

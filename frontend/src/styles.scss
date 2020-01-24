@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+.f-h {
+    min-height: 100vh;
+}
+
+.main-tag {
+    color: #17a2b8;
+    border: 1px solid #17a2b8;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.main-tag:hover {
+    background: #17a2b8;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.c-p {
+    cursor: pointer;
+}
+
+.pull-img {
+    height: 100px;
+}
+
+.cart-img {
+    height: 360px;
+}

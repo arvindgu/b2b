@@ -1,0 +1,31 @@
+<div class="container f-h d-flex align-items-center justify-content-center">
+  <div class="card border-0 shadow bg-light">
+    <div class="card-body text-center">
+      <img src="../assets/CHOCOPAY.svg" class="img-fluid" width="50%">
+    </div>
+    <div class="card-body">
+      <form [formGroup] ="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="name">User Name</label>
+          <input type="name" class="form-control" id="name" formControlName="name" placeholder="Enter User Name">
+          <span class="text-warning" *ngIf="loginForm.get('name').hasError('required') && loginForm.get('name').touched">
+            User name is required
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
+          <span class="text-warning" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+            Password is required
+          </span>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" [disabled]="loginForm.invalid" class="btn btn-choco w-100">Submit <i class="fas fa-sign-in-alt pl-3"></i></button>
+        </div>
+        <div class="d-flex justify-content-end">
+          <h5 class="main-tag mr-3 mt-3 c-p" (click)="signup()">Signup<i class="fas fa-plus pl-3"></i></h5>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
